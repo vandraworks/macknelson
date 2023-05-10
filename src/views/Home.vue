@@ -102,7 +102,7 @@ onUpdated(() => {
     p
       margin-bottom subspacing
     a
-      text-transform uppercase
+      text-decoration underline
   .smallHeader
     padding-bottom subspacing
     font-weight 300
