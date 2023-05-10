@@ -7,8 +7,8 @@
         <subheader>Menu</subheader>
 
         <div id="menuItems">
-          <router-link to="">Work</router-link>
-          <router-link to="">Non-Work</router-link>
+          <router-link to="/work">Work</router-link>
+          <router-link to="/nonwork">Non-Work</router-link>
         </div>
 
       </section>
