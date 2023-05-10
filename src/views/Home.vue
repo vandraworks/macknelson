@@ -29,7 +29,7 @@
 </template>
 
 <script setup>
-import {ref, onUpdated} from "vue";
+import {onUpdated} from "vue";
 
 import { usePage } from "~/composables";
 const page = usePage();
@@ -54,6 +54,8 @@ onUpdated(() => {
   column-gap mediumSpacing
   height 100vh
   margin 0 mediumSpacing
+  anim-TextSlideUp()
+
 #menu
   display flex
   justify-content center
