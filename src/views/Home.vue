@@ -35,7 +35,6 @@ import { usePage } from "~/composables";
 const page = usePage();
 
 import { useSite } from "~/composables";
-import algoliasearch from "algoliasearch";
 const site = useSite();
 
 onUpdated(() => {
