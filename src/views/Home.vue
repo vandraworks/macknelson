@@ -7,8 +7,8 @@
         <subheader>Menu</subheader>
 
         <div id="menuItems">
-          <router-link to="/work">Work</router-link>
-          <router-link to="/nonwork">Non-Work</router-link>
+          <router-link to="">Work</router-link>
+          <router-link to="">Non-Work</router-link>
         </div>
 
       </section>
@@ -65,7 +65,9 @@ onUpdated(() => {
     text-transform uppercase
     font-style italic
     margin-bottom smallSpacing
+    display none
   #menuItems
+    display none
     a
       display block
       font-size smallHeader
@@ -99,6 +101,8 @@ onUpdated(() => {
   .bodyCopy
     p
       margin-bottom subspacing
+    a
+      text-transform uppercase
   .smallHeader
     padding-bottom subspacing
     font-weight 300
