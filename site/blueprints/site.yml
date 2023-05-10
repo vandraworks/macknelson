@@ -1,0 +1,68 @@
+# The site blueprint must have a title, the title may be different from the file name
+# The `site.yml` blueprint defines the look of the start page (Dashboard) of the Panel.
+title: Schell Games
+
+# The site blueprint usually provides easy access to all main pages of the site.
+# In this example blueprint, we also show subpages of the `photography` and `notes` pages.
+# More about the site blueprint: https://getkirby.com/docs/reference/panel/blueprints/site
+
+columns:
+  - width: 3/4
+    sections:
+      # The `notes` section reuses the pages section defined in `/site/blueprints/sections/blog.yml`
+      pages:
+        type: pages
+        create: default
+        templates:
+          - home
+          - about
+          - default
+
+        # The `pages` pages section shows other main pages of the site
+        # Using the `templates` option, we limit which types of pages are shown
+        # Using the `create` option, we limit the type of page that can be created when a new page is created
+        # Note that the `sandbox` page and the `error` page that also exist in the content folder but use different blueprints thus do not show up in the list
+        # Since the error page's blueprint is set to `read: false`, it wouldn't show up here even if you added the error blueprint to the templates list
+  # The second column has two sections, `notes` and `pages`
+  - width: 1/4
+    sections:
+      siteSettings:
+        type: fields
+        fields:
+          siteSettingsHeadline:
+            label: Site Settings
+            type: info
+            text: Site-wide settings and values are found here.
+          announcementCopy:
+            label: Announcement Copy
+            type: text
+          navbarLogo:
+            label: Navbar Logo
+            type: files
+            multiple: false
+            query: site.images
+          mobileMenuLogo:
+            label: Mobile Menu Logo
+            type: files
+            multiple: false
+            query: site.images
+          favicon:
+            label: Favicon
+            type: files
+            multiple: false
+            query: site.images
+          thumbnail:
+            label: Thumbnail
+            type: files
+            multiple: false
+            query: site.images
+          metaTitle:
+            label: Default Meta Title
+            type: text
+          metaDescription:
+            label: Default Meta Description
+            type: textarea
+          footerLogo:
+            label: Footer Logo
+            type: files
+            multiple: false

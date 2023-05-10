@@ -1,0 +1,41 @@
+{
+  "private": true,
+  "version": "5.2.0",
+  "scripts": {
+    "kirby": "env-cmd --use-shell \"php -S \\$KIRBY_DEV_HOSTNAME:\\$KIRBY_DEV_PORT -t public vendor/getkirby/cms/router.php\"",
+    "dev": "shx touch src/.lock && concurrently \"npm:kirby\" \"vite\"",
+    "build": "shx rm -f src/.lock && vite build",
+    "lint": "eslint \"src/**/*.{js,vue}\"",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write \"src/**/*.{js,vue}\"",
+    "release": "npx -y bumpp --commit --push --tag"
+  },
+  "dependencies": {
+    "@aacassandra/vue3-progressbar": "^1.0.3",
+    "@marcoschulte/vue3-progress": "^0.0.6",
+    "arrive": "^2.4.1",
+    "ofetch": "^1.0.0",
+    "scule": "^1.0.0",
+    "splitting": "^1.0.6",
+    "ufo": "^1.0.1",
+    "vue": "^3.2.45",
+    "vue-cookies": "^1.7.4",
+    "vue-intersection-observer": "^0.1.7",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^0.1.1",
+    "@types/node": "^18.11.17",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "concurrently": "^7.6.0",
+    "env-cmd": "^10.1.0",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "2.8.1",
+    "shx": "^0.3.4",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^6.1.0",
+    "unplugin-vue-components": "^0.22.12",
+    "vite": "^4.0.3"
+  }
+}
